@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie5</title>
+  
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><i class= "glyphicon glyphicon-camera"></i>Brinkley Top Movies</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  		   <li><%= link_to "Movies", root_path %></li>
+		  			       <li><%= link_to "Actors", actors_path %></li>
+		  			       <li><%= link_to "Genres", genres_path %></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+          	<%= yield %>
+
+          <div class="mastfoot"> 
+            <div class="inner">
+              <p>Emily Brinkley, Winter TTS 2016</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
